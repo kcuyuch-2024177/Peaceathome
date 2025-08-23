@@ -235,6 +235,7 @@ public class Controlador extends HttpServlet {
                 }
             } else if ("Locacion".equals(menu)) {
                     switch (accion) {
+                        
                         case "Listar":
                             List<Locacion> listaLocacion = locacionDao.listar();
                             request.setAttribute("locacion", listaLocacion);
