@@ -10,6 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import modelo.Usuario;
 import modelo.UsuarioDAO;
 
@@ -46,7 +47,7 @@ public class Validar extends HttpServlet {
             out.println("</html>");
         }
     }
-
+    
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -79,15 +80,19 @@ public class Validar extends HttpServlet {
             String pass = request.getParameter("txtPass");
             usuario = usuarioDao.validar(user, pass);
             if (usuario.getCorreoUsuario()!= null ) {
-                    request.setAttribute("correo", usuario);
+                HttpSession session = request.getSession();
+                session.setAttribute("correo",usuario.getCorreoUsuario());
+                session.setAttribute("nombre",usuario.getNombreUsuario());
+                session.setAttribute("rol", usuario.getTipoUsuario());
                 request.getRequestDispatcher("Controlador?menu=Home").forward(request, response);
             }else {
-                request.getRequestDispatcher("index.jsp").forward(request, response);
+                request.getRequestDispatcher("login.jsp").forward(request, response);
             }// Poner una alerta de datos incorrectos, usuario o contraseña no encontrados          
         }else{
-            request.getRequestDispatcher("index.jsp").forward(request, response);
+            request.getRequestDispatcher("login.jsp").forward(request, response);
         }
     }
+    
 
     /**
      * Returns a short description of the servlet.
@@ -100,3 +105,4 @@ public class Validar extends HttpServlet {
     }// </editor-fold>
 
 }
+

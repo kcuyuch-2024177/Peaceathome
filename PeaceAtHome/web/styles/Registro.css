@@ -1,0 +1,149 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #7063BF;
+}
+
+
+.form-container {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 450px;
+}
+
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+
+.form-container .input-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+
+.form-container .input-box input,
+.form-container .input-box select {
+    width: 100%;
+    padding: 12px 12px 12px 35px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+    font-size: 16px;
+    background: none;
+    border-radius: 0;
+}
+
+
+.form-container .input-box input:focus,
+.form-container .input-box select:focus {
+    border-bottom-color: #2575fc;
+}
+
+
+.form-container .input-box label {
+    position: absolute;
+    top: 12px;
+    left: 35px;
+    pointer-events: none;
+    transition: 0.3s;
+    color: #999;
+    font-size: 16px;
+}
+
+
+.form-container .input-box input:focus + label,
+.form-container .input-box input:valid + label,
+.form-container .input-box select:focus + label,
+.form-container .input-box select:valid + label {
+    top: -15px;
+    left: 0;
+    color: #2575fc;
+    font-size: 12px;
+}
+
+
+.form-container .input-box i {
+    position: absolute;
+    top: 12px;
+    left: 5px;
+    font-size: 18px;
+    color: #2575fc;
+}
+
+
+.form-container .input-box span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #4C39A2;
+    transition: 0.3s;
+}
+
+
+.form-container .input-box input:focus ~ span,
+.form-container .input-box select:focus ~ span {
+    width: 100%;
+}
+
+
+.form-container .btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #2575fc;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-container .btn:hover {
+    background-color: #1a5ddb;
+    box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
+}
+
+/* Input file */
+.form-container input[type="file"] {
+    padding: 5px;
+}
+
+.form-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #fff; /* texto blanco */
+    font-weight: bold;
+    text-align: center;
+}
+
+.logo {
+    width: 60px; /* tamaño más pequeño */
+    height: auto;
+    margin: 1px auto 1px auto;
+    display: block; /* centrar el logo */
+}

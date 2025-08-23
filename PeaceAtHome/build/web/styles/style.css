@@ -1,214 +1,236 @@
-.body-login {
-    margin: 0;
-    padding: 0;
-    font-family: 'Century Gothic', 'Arial', sans-serif;
-    background: linear-gradient(150deg,  #0f0c29,#302b63,#24243e);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-}
-/*-------------------------------------------- */
-.formulario {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 400px;
-    background: rgb(255, 255, 255);
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    padding-bottom: 20px;
-}
-/*-------------------------------------------- */
-.formulario h1 {
-    font-family: 'Century Gothic', 'Arial', sans-serif;
-    text-align: center;
-    padding: 0 0 20px 0;
-    border-bottom: 1px solid silver;
-    color: rgb(0, 0, 0);
-}
-/*-------------------------------------------- */
-.formulario form {
-    padding: 0 40px;
-    box-sizing: border-box;
-}
-/*-------------------------------------------- */
-.input-box {
-    position: relative;
-    border-bottom: 2px solid silver;
-    margin: 30px 0;
-}
-/*-------------------------------------------- */
-.input-box input {
-    width: 100%;
-    padding: 0 5px;
-    height: 40px;
-    font-size: 16px;
-    border: none;
-    background: none;
-    outline: none;
-}
-/*-------------------------------------------- */
-.input-box label {
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    color: #b4acac;
-    transform: translateY(-50%);
-    font-size: 16px;
-    pointer-events: none;
-    transition: 0.5s ease;
-}
-/*-------------------------------------------- */
-.input-box span::before {
-    content: '';
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background-color: rgb(68, 16, 122);
-    transition: 0.5s ease;
-}
-/*-------------------------------------------- */
-.input-box input:focus ~ label,
-.input-box input:valid ~ label {
-    top: -5px;
-    font-size: 12px;
-    color: rgb(68, 16, 122);
-}
-/*-------------------------------------------- */
-.input-box input:focus ~ span::before,
-.input-box input:valid ~ span::before {
-    width: 100%;
-}
-/*-------------------------------------------- */
-.recordar {
-    margin: -5px 0 20px 5px;
-    color: blue;
-    cursor: pointer;
-}
-/*-------------------------------------------- */
-.recordar:hover {
-    text-decoration: underline;
-}
-/*-------------------------------------------- */
-input[type="submit"] {
-    width: 100%;
-    height: 50px;
-    border: 1px solid;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(150deg,      #0f0c29,#302b63,#24243e);
-    border-radius: 25px;
-    font-size: 18px;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    outline: none;
-    transition: 0.3s ease;
-}
-/*-------------------------------------------- */
-input[type="submit"]:hover {
-    border-color: rgb(53, 52, 100);
-}
-/*-------------------------------------------- */
-.registrarse {
-    margin: 30px 0;
-    text-align: center;
-    font-size: 16px;
-    color: black;
-}
-/*-------------------------------------------- */
-.registrarse a {
-    color: blue;
-    text-decoration: none;
-}
-/*-------------------------------------------- */
-.registrarse a:hover {
-    text-decoration: underline;
-}    
-/*-------------------------------------------- */
-.input-box i{
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-    color: rgb(68, 16, 122);
-}
-/*-------------------------------------------- */
-.body-home {
+body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    padding: 0;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-    text-align: center;
-    
-    ;
-    
-
+    margin-left: 80px; /* espacio para el menú lateral */
 }
-/*-------------------------------------------- */
-.centrado{
+
+#hero{
+    display: flex;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 60vh;
+    color: white;
+    background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.2)
+    ),url(../Images/Home.jpeg);
+    background-repeat:no-repeat ;
+    background-size: cover;
+    background-position: center center;
+}
+/*-----------------Imagen Grande----------------------- */
+#hero h1{
+    color: white;
+}
+
+h1{font-size: 3.5em; }
+
+.centrado {
     text-align: center;
     color: black;
     font-size: 25px;
-    margin: 1px auto 40px auto;
-    max-width: 50px;
-    
+    margin: 20px auto 40px auto;
 }
-/*-------------------------------------------- */
+
+/*------------------ Nave ------------------------ */
 nav {
-    background-color: #ff5b76;
-    background: linear-gradient(135deg, #ff5b76 0%, #d495ff 100%);
-    padding: 30px;
-    text-align: center;
+    background: linear-gradient(
+        to right,
+            #651986,oklab(50.517999999999994% 0.12871 -0.173)); 
+    padding: 2px 0;
     display: flex;
-    justify-content: center;    
+    flex-direction: column;
     align-items: center;
-    background: linear-gradient();
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; 
+    width: 80px;
+    box-shadow: 2px 0 3px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    gap: 30px;
 }
-/*-------------------------------------------- */
+nav a {
+    color: white;
+    font-size: 1.5rem; 
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: rgb(232, 24, 166); 
+}
+
 nav h2 {
-    color: aliceblue;
-    margin: 0 15px;
-    font-weight: bold;    
-    
-
+    margin: 0;           
+    font-size: 14px;     
+    text-align: center;  
+    color: white;        
+    pointer-events: none;
 }
-/*-------------------------------------------- */
-nav h2:hover {
-    text-decoration: underline;
 
+/*------------------- Botonoes ----------------------- */
+.btn {
+    color: white;
+    font-size: 35px;
+    text-decoration: none;
+    background: transparent;
+    margin: 10px 0;
+    transition: 0.2s;
 }
-/*-------------------------------------------- */
-.tarjeta-contenedor {
+
+.btn:hover {
+    transform: scale(1.2);
+    color: rgb(25, 200, 224);
+}
+
+
+/*-------------------- Hoteles --------------------- */
+
+/* Contenedor para centra la tarjeta */
+.hotel-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+    margin-top: 600px; /* separa la tarjeta del nav */
 }
-/*-------------------------------------------- */
-.tarjeta {
-    background-color: white;
-    border-radius: 5px;
-    padding: 100px;
-    width: 200px;
-    box-shadow: 0 4px 8px rgb(152, 161, 238);
-    transition: transform 0.2s, box-shadow 0.2s;
-    border: 0.1px solid rgb(255, 91, 118);
-}
-/*-------------------------------------------- */
-.tarjeta h3 {
-    margin-top: 0;
-    color: black;
-    text-align: center;
-}
-/*-------------------------------------------- */
-.tarjeta:hover {
-transform: translateY(-10px) scale(1.01);
-box-shadow: 0 8px 10px rgb(153, 171, 255);
 
+.hotel-card {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Animación */
+.hotel-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 20px rgba(141, 2, 169, 0.2);
+}
+
+.hotel-image {
+    flex: 0 0 200px;
+}
+
+.hotel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hotel-info {
+    flex: 1;
+    padding: 15px;
+}
+
+.hotel-info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.location {
+    color: gray;
+    font-size: 14px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+}
+
+.score {
+    background: #0c8f35;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.stars {
+    color: gold;
+}
+
+.price-list {
+    margin-top: 10px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.hotel-offer {
+    flex: 0 0 150px;
+    background: #f9f9f9;
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hotel-offer h2 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.hotel-offer p {
+    font-size: 12px;
+    color: #555;
+}
+
+.hotel-offer button {
+    background: #b324c6;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.hotel-offer button:hover {
+    background: linear-gradient(
+        to right,
+            #651986,oklab(50.517999999999994% 0.12871 -0.173)); 
+}
+
+.hotel-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+    background-color: #f0f0f0;
+    padding-top: 20px; 
+}
+.hotel-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 15px; /* separación entre tarjetas */
+    padding: 40px;
+    margin-left: 80px; /* para no chocar con el nav */
+}
+
+
+
+
+
+
+
+
+
+
 

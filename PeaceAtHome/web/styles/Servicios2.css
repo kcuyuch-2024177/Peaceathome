@@ -1,0 +1,125 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 18/08/2025, 23:24:23
+    Author     : kikec
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.page-title {
+    text-align: center;
+    color: #4a148c;
+    margin-bottom: 40px;
+}
+
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 0;
+}
+
+/* Estilo para cada tarjeta */
+.service-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-image-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.service-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image {
+    transform: scale(1.05);
+}
+
+.service-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-info h3 {
+    margin-top: 0;
+    color: #6a1b9a;
+}
+
+.service-description {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.service-button {
+   
+    background-color: #4C39A2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block; 
+    text-decoration: none; 
+}
+
+.service-button:hover {
+    background-color: #4833a6; 
+}
+
+
+.details {
+    font-size: 0.9em;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.details p {
+    margin: 5px 0;
+}
+
+.details strong {
+    color: #4a148c;
+}
+
+.estado.disponible {
+    color: green;
+    font-weight: bold;
+}
+
+.estado.no-disponible {
+    color: red;
+    font-weight: bold;
+}

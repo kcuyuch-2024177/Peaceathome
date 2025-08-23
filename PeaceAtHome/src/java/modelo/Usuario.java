@@ -1,20 +1,23 @@
 package modelo;
 
-import java.time.LocalDate;
+import java.util.Date;
+
+
 
 public class Usuario {
     
     private String correoUsuario;
     private String nombreUsuario;
     private String telefonoUsuario;
-    private String fechaNacimiento;
+    private Date fechaNacimiento;
     private String contrasenia;
     private String tipoUsuario;
 
     public Usuario() {
     }
-
-    public Usuario(String correoUsuario, String nombreUsuario, String telefonoUsuario, String fechaNacimiento, String contrasenia, String tipoUsuario) {
+    
+    
+    public Usuario(String correoUsuario, String nombreUsuario, String telefonoUsuario, Date fechaNacimiento, String contrasenia, String tipoUsuario) {
         this.correoUsuario = correoUsuario;
         this.nombreUsuario = nombreUsuario;
         this.telefonoUsuario = telefonoUsuario;
@@ -47,11 +50,11 @@ public class Usuario {
         this.telefonoUsuario = telefonoUsuario;
     }
 
-    public String getFechaNacimiento() {
+    public Date getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(String fechaNacimiento) {
+    public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 
@@ -69,8 +72,6 @@ public class Usuario {
 
     public void setTipoUsuario(String tipoUsuario) {
         this.tipoUsuario = tipoUsuario;
-    }
-    
-    
+    }    
   
 }

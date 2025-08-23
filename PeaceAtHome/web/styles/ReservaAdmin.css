@@ -1,0 +1,125 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 22/08/2025, 14:57:46
+    Author     : joj
+*/
+
+.contenido {
+    padding: 30px;
+}
+
+.reservas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.reservas-header h1 {
+    color: #b324c6;
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* ===== TABLA ===== */
+.tabla-container {
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow-x: auto;
+}
+
+.tabla-reservas {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-reservas thead {
+    background: linear-gradient(to right, #651986, #932ac9);
+}
+
+.tabla-reservas thead th {
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+.tabla-reservas tbody td {
+    padding: 12px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #eee;
+}
+
+/* ===== CELDAS ESPECIALES ===== */
+.fecha-cell {
+    font-family: 'Courier New', monospace;
+    color: #666;
+}
+
+.precio-cell {
+    font-weight: bold;
+    color: #2a7a2e;
+}
+
+.email-cell {
+    font-size: 0.85rem;
+    color: #007bff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 180px;
+}
+
+.estado-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.estado-disponible {
+    background: #d4edda;
+    color: #155724;
+}
+
+.estado-ocupada {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.estado-cancelada {
+    background: #e2e3e5;
+    color: #383d41;
+}
+
+/* ===== ACCIONES ===== */
+.acciones-cell {
+    text-align: center;
+}
+
+.btn-eliminar {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: background 0.3s ease;
+}
+
+.btn-eliminar:hover {
+    background: #c82333;
+}
