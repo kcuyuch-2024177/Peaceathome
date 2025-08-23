@@ -1,5 +1,6 @@
 package modelo;
 
+ 
 
 public class Locacion {
     private int codigoLocacion;
@@ -8,8 +9,9 @@ public class Locacion {
     private String municipio;
     private String referencia;
     private int codigoPropiedad;
-
+ 
     public Locacion() {
+        
     }
 
     public Locacion(int codigoLocacion, String direccion, String departamento, String municipio, String referencia, int codigoPropiedad) {
