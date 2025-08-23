@@ -23,9 +23,11 @@ public class ServicioDAO {
     int resp;
     
     public List listar(){
+        
         String sql = "select * from servicio";
         List<Servicio> listaServicio = new ArrayList<>();
         try{
+            
             con = cn.Conexion();
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
