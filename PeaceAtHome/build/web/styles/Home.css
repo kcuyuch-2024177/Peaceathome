@@ -13,7 +13,6 @@ body {
     margin-left: 80px;
 }
 
-
 #hero {
     display: flex;
     align-items: center;
@@ -29,6 +28,7 @@ body {
     background-size: cover;
     background-position: center center;
 }
+
 
 #hero h1 {
     font-weight: bold;
