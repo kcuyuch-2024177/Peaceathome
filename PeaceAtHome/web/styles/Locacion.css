@@ -3,19 +3,19 @@ body {
     padding: 0;
     font-family: sans-serif;
     background-color: #e4e4e4;
-    overflow-y: auto; /* permitir scroll vertical */
+    overflow-y: auto;
 }
 
-/* Contenedor principal */
+
 .container {
     display: flex;
-    flex-direction: row; /* nav lateral + contenido */
+    flex-direction: row; 
     min-height: 100vh;
     width: 100vw;
-    overflow: auto; /* permitir scroll si contenido es mayor */
+    overflow: auto; 
 }
 
-/* Botones generales (manteniendo tus colores) */
+
 .btn {
     color: white;
     font-size: 35px;
@@ -30,7 +30,7 @@ body {
     opacity: 0.9;
 }
 
-/* Botones de formulario */
+
 .btn-form {
     color: rgb(255, 255, 255);
     font-size: 25px;
@@ -52,7 +52,7 @@ body {
     background: linear-gradient(to right, #651986, oklab(52.128% 0.11415 -0.1458));
 }
 
-/* Botones de tabla */
+
 .btn-table {
     color: rgb(255, 255, 255);
     font-size: 20px;
@@ -67,7 +67,6 @@ body {
     background: linear-gradient(to right, #651986, oklab(52.128% 0.11415 -0.1458));
 }
 
-/* Tarjetas */
 .card {
     background: #ffffff;
     margin-top: 15px;
@@ -88,7 +87,7 @@ body {
     color: rgb(107, 107, 107);
 }
 
-/* Formularios */
+
 .form-control {
     border-radius: 10px;
     border: 1px solid #c4c4c4;
@@ -107,7 +106,7 @@ body {
     border-radius: 8px;
 }
 
-/* Validaciones */
+
 .form-control:invalid {
     border-color: red;
     box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
@@ -117,7 +116,7 @@ body {
     box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
 }
 
-/* Tabla */
+
 .table {
     width: 100%;
     min-width: 700px;
@@ -143,13 +142,12 @@ body {
     font-size: 1.5rem;
 }
 
-/* Scroll para tabla si es muy larga */
+
 .table-responsive {
     max-height: 500px;
     overflow-y: auto;
 }
 
-/* Filas y columnas */
 .row {
     flex-wrap: wrap;
     width: 100%;
@@ -165,7 +163,7 @@ body {
     max-width: 70%;
 }
 
-/* Contenido principal separado del nav */
+
 .main-content {
     margin-left: 80px;
     padding: 20px;
