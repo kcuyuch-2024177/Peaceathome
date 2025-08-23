@@ -31,7 +31,8 @@
             }
         %>
     </nav>
-    <div class="contenido">
+    
+        <div class="contenido">
         <div class="reserva-container">
             <div class="reserva-header">
                 <button class="btn-volver" onclick="window.history.back()">
@@ -42,69 +43,49 @@
 
             <div class="reserva-content">
                 <div class="propiedad-summary">
-                    <h2 id="property-title">Loft moderno </h2>
+                    <h2 id="property-title">Loft moderno</h2>
                     <div class="price-display">
-                        <span class="price-label">Precio por noche:</span>
-                        <span class="price-value" id="price-per-night">Q450</span>
+                        <span class="price-label">Precio por día:</span>
+                        <span class="price-value">450</span>
                     </div>
                 </div>
 
-                <!-- Importante: definir action y method -->
-                <form id="reserva-form" class="reserva-form" action="ReservaController" method="post">
-                    <div class="form-section">
-                        <h3>Información de la Reserva</h3>
+                <form id="reserva-form" class="reserva-form" action="Controlador?menu=Reserva&accion=Agregar" method="post">
+        <div class="form-section">
+            <h3>Información de la Reserva</h3>
 
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="fecha-inicio">Fecha de Inicio *</label>
-                                <input type="date" id="fecha-inicio" name="fechaInicio" required>
-                            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fecha-inicio">Fecha de Inicio *</label>
+                    <input type="date" id="fecha-inicio" name="fechaInicio" required>
+                </div>
 
-                            <div class="form-group">
-                                <label for="fecha-fin">Fecha de Fin *</label>
-                                <input type="date" id="fecha-fin" name="fechaFin" required>
-                            </div>
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <label for="fecha-fin">Fecha de Fin *</label>
+                    <input type="date" id="fecha-fin" name="fechaFin" required>
+                </div>
+            </div>
+        </div>
 
-                    <div class="form-section">
-                        <h3>Información Personal</h3>
-                        <div class="form-group">
-                            <label for="email">Correo Electrónico *</label>
-                            <input type="email" id="email" name="correoUsuario" required>
-                        </div>
-                    </div>
+        <div class="form-section">
+            <h3>Información Personal</h3>
+            <div class="form-group">
+                <label for="email">Correo Electrónico *</label>
+                <input type="email" id="email" name="correoUsuario" required>
+            </div>
+        </div>
 
-                    <div class="form-section">
-                        <h3>Resumen de Costos</h3>
-                        <div class="cost-summary">
-                            <div class="cost-row">
-                                <span>Precio por noche:</span>
-                                <span id="display-price-per-night">Q450</span>
-                            </div>
-                            <div class="cost-row">
-                                <span>Número de noches:</span>
-                                <span id="total-nights">0</span>
-                            </div>
-                            <div class="cost-row total">
-                                <span><strong>Total:</strong></span>
-                                <span id="total-amount"><strong>Q0</strong></span>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Campo oculto con precio fijo -->
+        <input type="hidden" name="precioDia" value="450">
 
-                    <!-- Campos ocultos -->
-                    <input type="hidden" id="codigo-propiedad" name="codigoPropiedad" value="">
-                    <input type="hidden" id="precio-por-dia" name="precioDia" value="">
-                    <input type="hidden" id="estado" name="estado" value="Disponible">
-
-                    <div class="form-actions">
-                        <button type="button" class="btn-cancelar" onclick="window.history.back()">Cancelar</button>
-                        <button type="submit" class="btn-confirmar">Confirmar Reserva</button>
-                    </div>
-                </form>
+        <div class="form-actions">
+            <button type="button" class="btn-cancelar" onclick="window.history.back()">Cancelar</button>
+            <button type="submit" class="btn-confirmar">Confirmar Reserva</button>
+        </div>
+    </form>
             </div>
         </div>
     </div>
+
     </body>
 </html>

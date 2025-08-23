@@ -19,7 +19,7 @@
         <h2></h2>
         <a href="#" class="nav-btn"><i class='bx bx-list-ul'></i></a>
         <a href="Home.jsp" class="nav-btn"><i class='bx bx-home'></i></a>
-        <a href="ReservaAdmin.jsp" class="nav-btn"><i class='bx bx-calendar-alt'></i></a>
+        <a href="Controlador?menu=Reserva&accion=Listar" class="nav-btn"><i class='bx bx-calendar-alt'></i></a>
         <a href="PropiedadAdmin.jsp" class="nav-btn"><i class='bx bx-building-house'></i></a>
         <a href="PagoAdmin.jsp" class="nav-btn"><i class='bx bx-coin'></i></a>
         <a href="ServiciosAdmin.jsp" class="nav-btn"><i class='bx  bx-bell'></i></a>

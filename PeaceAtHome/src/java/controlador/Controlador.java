@@ -19,6 +19,8 @@ import modelo.LocacionDAO;
 import modelo.Propiedad;
 import modelo.PropiedadDAO;
 import modelo.ReembolsoDAO;
+import modelo.Reserva;
+import modelo.ReservaDAO;
 import modelo.Servicio;
 import modelo.ServicioDAO;
 import modelo.SoporteTecnico;
@@ -27,11 +29,15 @@ import modelo.UsuarioDAO;
 import modelo.Usuario;
 
 public class Controlador extends HttpServlet {
-    SoporteTecnicoDAO soporteDao = new SoporteTecnicoDAO();
+    
     int codSoporte;
     int codLocacion;
     int codServicio;
     int codPropiedad;
+    int codReserva;   
+    SoporteTecnicoDAO soporteDao = new SoporteTecnicoDAO();
+    Reserva reserva = new Reserva();
+    ReservaDAO reservaDao = new ReservaDAO();
     Propiedad propiedad = new Propiedad();
     PropiedadDAO propiedadDao = new PropiedadDAO();
     Servicio servicio = new Servicio(); 
@@ -440,11 +446,9 @@ public class Controlador extends HttpServlet {
             }
         }else if("Reembolso".equals(menu)){
             switch (accion) {
-                // Paso 1: muestra una notificacion de que si esta seguro de hacer el reembolso
                 case "MostrarNotiReembolso":
                     request.getRequestDispatcher("NotiReembolso.jsp").forward(request, response);
                     break;
-                //Paso 2: si presiona solicitar reembolso que pida el codigoPago y elimine la reserva
                 case "RealizarReembolso":
                     int codigoPago = Integer.parseInt(request.getParameter("codigoPago"));
                     ReembolsoDAO dao = new ReembolsoDAO();
@@ -453,7 +457,52 @@ public class Controlador extends HttpServlet {
                     request.getRequestDispatcher("Reembolso.jsp").forward(request, response);
                     break;
             }
-        }
+        }else if (menu.equals("Reserva")) {
+                switch(accion){
+                    case "Listar":
+                        List<Reserva> listarReserva = reservaDao.listar();
+                        request.setAttribute("reservas", listarReserva);
+                        request.getRequestDispatcher("ReservaAdmin.jsp").forward(request, response);
+                        break;
+                    default:
+                        response.sendRedirect("Controlador?menu=Reserva&accion=Listar");
+                        break;
+
+                    case "Agregar":
+                reserva = new Reserva(); 
+
+                String fechaInicioStr = request.getParameter("fechaInicio");
+                String fechaFinStr = request.getParameter("fechaFin");
+
+                if (fechaInicioStr == null || fechaFinStr == null ||
+                    fechaInicioStr.isEmpty() || fechaFinStr.isEmpty()) {
+                    request.setAttribute("error", "Debe ingresar ambas fechas.");
+                    request.getRequestDispatcher("Reserva.jsp").forward(request, response);
+                    break;
+                }
+
+                java.sql.Date fechaInicio = java.sql.Date.valueOf(fechaInicioStr);
+                java.sql.Date fechaFin = java.sql.Date.valueOf(fechaFinStr);
+
+                reserva.setFechaInicio(fechaInicio);
+                reserva.setFechaFin(fechaFin);
+
+                double precioDia = Double.parseDouble(request.getParameter("precioDia"));
+                reserva.setPrecioDia(precioDia);
+                reserva.setCorreoUsuario(request.getParameter("correoUsuario"));
+                reserva.setEstado("Disponible");
+                reserva.setCodigoPropiedad(1);
+                reserva.setCodigoPago(1);
+                int resp = reservaDao.agregar(reserva);
+                if(resp > 0){
+                    response.sendRedirect("Controlador?menu=Reserva&accion=Listar");
+                }else{
+                    request.setAttribute("error", "No se pudo guardar la reserva.");
+                    request.getRequestDispatcher("Reserva.jsp").forward(request, response);
+                }
+                break;
+                }
+            }
                            
         } catch (Exception e) {
             e.printStackTrace();

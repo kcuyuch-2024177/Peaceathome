@@ -6,6 +6,7 @@
     <title>Mariana's Petit Hotel</title>
     <link rel="stylesheet" href="styles/Home.css">
         <link rel="stylesheet" href="styles/Nav.css">
+        <link rel="stylesheet" href="styles/Resenias.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>

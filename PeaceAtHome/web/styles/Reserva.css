@@ -1,11 +1,4 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : 20/08/2025, 02:12:38
-    Author     : joj
-*/
+/* ==================== ESTILOS PARA FORMULARIO DE RESERVA ==================== */
 
 .reserva-container {
     max-width: 1000px;
@@ -406,5 +399,276 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     .modal-content {
         width: 95%;
         margin: 20% auto;
+    }
+}
+
+/* ==================== ESTILOS PARA TABLA DE RESERVAS ==================== */
+
+.reservas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.reservas-header h1 {
+    color: #b324c6;
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.btn-nueva-reserva {
+    background: #b324c6;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-nueva-reserva:hover {
+    background: #8f1a9c;
+}
+
+.tabla-container {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow-x: auto;
+}
+
+.tabla-reservas {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.tabla-reservas thead {
+    background: linear-gradient(to right, #651986, oklab(50.517999999999994% 0.12871 -0.173));
+}
+
+.tabla-reservas thead th {
+    color: white;
+    font-weight: bold;
+    padding: 15px 12px;
+    text-align: left;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    border: none;
+}
+
+.tabla-reservas tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.2s ease;
+}
+
+.tabla-reservas tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.tabla-reservas tbody tr:last-child {
+    border-bottom: none;
+}
+
+.tabla-reservas tbody td {
+    padding: 15px 12px;
+    font-size: 0.9rem;
+    color: #333;
+    vertical-align: middle;
+}
+
+.estado-badge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.estado-disponible {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.estado-ocupada {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.estado-cancelada {
+    background-color: #e2e3e5;
+    color: #383d41;
+    border: 1px solid #d6d8db;
+}
+
+.fecha-cell {
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.precio-cell {
+    font-weight: bold;
+    color: #2a7a2e;
+}
+
+.email-cell {
+    font-size: 0.85rem;
+    color: #007bff;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.acciones-cell {
+    text-align: center;
+}
+
+.btn-eliminar {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.btn-eliminar:hover {
+    background: #c82333;
+}
+
+.no-reservas {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-style: italic;
+}
+
+.no-reservas i {
+    font-size: 3rem;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+/* Modal de eliminación */
+.warning-icon {
+    font-size: 3rem;
+    color: #ffc107;
+    margin-bottom: 15px;
+}
+
+.warning-text {
+    color: #dc3545;
+    font-weight: bold;
+    margin-top: 10px !important;
+}
+
+.btn-modal-cancelar {
+    background: transparent;
+    border: 2px solid #6c757d;
+    color: #6c757d;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-modal-cancelar:hover {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-modal-eliminar {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-modal-eliminar:hover {
+    background: #c82333;
+}
+
+/* Estados de carga */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+.loading i {
+    font-size: 2rem;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive para tabla */
+@media (max-width: 768px) {
+    .reservas-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+    
+    .reservas-header h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .tabla-container {
+        padding: 15px;
+        overflow-x: auto;
+    }
+    
+    .tabla-reservas {
+        min-width: 800px;
+    }
+    
+    .tabla-reservas thead th,
+    .tabla-reservas tbody td {
+        padding: 10px 8px;
+        font-size: 0.8rem;
+    }
+    
+    .email-cell {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tabla-reservas {
+        min-width: 700px;
+    }
+    
+    .reservas-header h1 {
+        font-size: 1.8rem;
     }
 }
