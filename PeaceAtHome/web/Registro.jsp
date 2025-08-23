@@ -21,7 +21,6 @@
     <h2 class="form-title">Registro</h2> 
   <div class="form-container">
 
-    <%-- Mostrar mensaje de éxito si existe --%>
     <c:if test="${not empty param.registro}">
         <div class="alert alert-success">
             <c:choose>
@@ -80,7 +79,6 @@
         <button type="submit" class="btn">Registrarse</button>
     </form>
 
-    <%-- Enlace para ir al login --%>
     <div class="login-link">
         <p>¿Ya tienes cuenta? <a href="login.jsp">Inicia sesión aquí</a></p>
     </div>

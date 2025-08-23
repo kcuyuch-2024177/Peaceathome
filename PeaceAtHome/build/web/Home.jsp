@@ -26,7 +26,7 @@
         <a href="Usuarioadmin.jsp" class="btn"><i class='bx bx-user'></i></a>
         <a href="PropiedadAdmin.jsp" class="btn"><i class='bx bx-building-house'></i></a>
         <a href="PagoAdmin.jsp" class="btn"><i class='bx  bx-coin'></i></a>
-        <a href="SoporteAdmin.jsp" class="btn"><i class='bx bx-cog'></i></a>
+        <a href="Controlador?menu=SoporteAdmin&accion=Listar" class="btn"><i class='bx bx-cog'></i></a>
         <%    
             }
         %>
@@ -114,6 +114,7 @@
                 %>
             </div>
         </div>
+            
 <!----------------------------- Hotele 3 ---------------------------------------------------------->
         <div class="hotel-card">
             <div class="hotel-image">

@@ -38,6 +38,7 @@
             <div class="recordar">¿Forgot password?</div>
             <input type="submit" value="Iniciar" name="accion">
             <div class="registrarse">
+                
                 Don't have an account <a href="Registro.jsp">Sing up</a>
             </div>
         </form>

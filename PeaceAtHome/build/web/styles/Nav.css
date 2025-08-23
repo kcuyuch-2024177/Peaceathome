@@ -14,7 +14,6 @@ nav {
     gap: 30px;
 }
 
-
 nav a i {
     font-size: 35px;     
     display: block;
@@ -23,12 +22,10 @@ nav a i {
     transition: transform 0.2s, color 0.2s;
 }
 
-
 nav a:hover i {
     transform: scale(1.2);
     color: rgb(25, 200, 224);
 }
-
 
 nav h2 {
     margin: 0;
@@ -38,7 +35,6 @@ nav h2 {
     pointer-events: none;
 }
 
-
 nav a {
     text-decoration: none;
     margin: 10px 0;
@@ -46,7 +42,6 @@ nav a {
     display: flex;
     justify-content: center;
 }
-
 
 .btn, .nav-btn {
     font-size: inherit; 
