@@ -13,7 +13,7 @@ public class UsuarioDAO {
     
     public Usuario validar(String correo, String contrasenia) {
         Usuario usuario = null;
-        String sql = "SELECT * FROM Usuario WHERE correoUsuario = ? AND contrasenia = ?";
+        String sql = "select * from Usuario WHERE correoUsuario = ? AND contrasenia = ?";
         
         try (Connection con = cn.Conexion();
              PreparedStatement ps = con.prepareStatement(sql)) {
