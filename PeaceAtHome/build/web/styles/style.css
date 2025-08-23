@@ -1,0 +1,236 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    margin-left: 80px; /* espacio para el menú lateral */
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 60vh;
+    color: white;
+    background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.2)
+    ),url(../Images/Home.jpeg);
+    background-repeat:no-repeat ;
+    background-size: cover;
+    background-position: center center;
+}
+/*-----------------Imagen Grande----------------------- */
+#hero h1{
+    color: white;
+}
+
+h1{font-size: 3.5em; }
+
+.centrado {
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    margin: 20px auto 40px auto;
+}
+
+/*------------------ Nave ------------------------ */
+nav {
+    background: linear-gradient(
+        to right,
+            #651986,oklab(50.517999999999994% 0.12871 -0.173)); 
+    padding: 2px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; 
+    width: 80px;
+    box-shadow: 2px 0 3px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    gap: 30px;
+}
+nav a {
+    color: white;
+    font-size: 1.5rem; 
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: rgb(232, 24, 166); 
+}
+
+nav h2 {
+    margin: 0;           
+    font-size: 14px;     
+    text-align: center;  
+    color: white;        
+    pointer-events: none;
+}
+
+/*------------------- Botonoes ----------------------- */
+.btn {
+    color: white;
+    font-size: 35px;
+    text-decoration: none;
+    background: transparent;
+    margin: 10px 0;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+    color: rgb(25, 200, 224);
+}
+
+
+/*-------------------- Hoteles --------------------- */
+
+/* Contenedor para centra la tarjeta */
+.hotel-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 600px; /* separa la tarjeta del nav */
+}
+
+.hotel-card {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animación */
+.hotel-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 20px rgba(141, 2, 169, 0.2);
+}
+
+.hotel-image {
+    flex: 0 0 200px;
+}
+
+.hotel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hotel-info {
+    flex: 1;
+    padding: 15px;
+}
+
+.hotel-info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.location {
+    color: gray;
+    font-size: 14px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+}
+
+.score {
+    background: #0c8f35;
+    color: white;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.stars {
+    color: gold;
+}
+
+.price-list {
+    margin-top: 10px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.hotel-offer {
+    flex: 0 0 150px;
+    background: #f9f9f9;
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hotel-offer h2 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.hotel-offer p {
+    font-size: 12px;
+    color: #555;
+}
+
+.hotel-offer button {
+    background: #b324c6;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.hotel-offer button:hover {
+    background: linear-gradient(
+        to right,
+            #651986,oklab(50.517999999999994% 0.12871 -0.173)); 
+}
+
+.hotel-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 40px;
+    background-color: #f0f0f0;
+    padding-top: 20px; 
+}
+.hotel-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 15px; /* separación entre tarjetas */
+    padding: 40px;
+    margin-left: 80px; /* para no chocar con el nav */
+}
+
+
+
+
+
+
+
+
+
+
+
