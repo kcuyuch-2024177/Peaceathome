@@ -15,7 +15,8 @@ public class Usuario {
 
     public Usuario() {
     }
-
+    
+    
     public Usuario(String correoUsuario, String nombreUsuario, String telefonoUsuario, Date fechaNacimiento, String contrasenia, String tipoUsuario) {
         this.correoUsuario = correoUsuario;
         this.nombreUsuario = nombreUsuario;
