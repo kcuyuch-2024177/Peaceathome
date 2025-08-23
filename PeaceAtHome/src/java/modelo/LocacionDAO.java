@@ -1,5 +1,6 @@
 package modelo;
 
+
 import config.Conexion;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -9,6 +10,7 @@ import java.util.List;
 
 public class LocacionDAO {
 
+    
     Conexion cn = new Conexion();
     Connection con;
     PreparedStatement ps;
