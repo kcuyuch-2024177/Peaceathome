@@ -39,7 +39,6 @@ public class Controlador extends HttpServlet {
     UsuarioDAO usuarioDao = new UsuarioDAO();
     LocacionDAO locacionDao = new LocacionDAO();
     Locacion locacion = new Locacion();
-
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
