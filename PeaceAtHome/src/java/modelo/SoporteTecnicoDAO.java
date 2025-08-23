@@ -10,6 +10,7 @@ import java.util.List;
 public class SoporteTecnicoDAO {
 
     Conexion cn = new Conexion();
+    
 
     public List<SoporteTecnico> listar() {
         List<SoporteTecnico> listaSoporte = new ArrayList<>();
