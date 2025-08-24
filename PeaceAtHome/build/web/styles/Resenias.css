@@ -1,0 +1,124 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 23/08/2025, 17:04:25
+    Author     : joj
+*/
+
+/* css de reseñas xd */
+.resenas {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 24px 16px;
+    margin-top: 32px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+.resenas h3 {
+    font-size: 1.5rem;
+    color: #a251ff;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+   
+}
+.resena {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+ 
+.estrellas, .estrellas-input label {
+    color: #8f1a9c;
+    font-size: 1.1rem;
+}
+.form-resena {
+    background: #e9ecef;
+    border-radius: 8px;
+    padding: 14px 14px;
+    margin-top: 18px;
+   
+}
+.form-resena h4 {
+    margin-bottom: 8px;
+    color: #2e2eff;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+   
+}
+.form-group {
+    margin-bottom: 10px;
+   
+}
+ 
+.form-resena textarea {
+    width: 100%;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 6px;
+    font-size: 1rem;
+    margin-top: 3px;
+    background: #ffffff;
+    resize: none;
+   
+}
+.form-resena textarea {
+    min-height: 50px;
+}
+.estrellas-input {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2px;
+}
+ 
+.estrellas-input label {
+    cursor: pointer;
+    color: #bfc0c0;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+ 
+ 
+.estrellas-input label:hover ~ label {
+    color: #8f1a9c;
+}
+.btn-enviar {
+    background: #dd34ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.btn-enviar:hover {
+    background: #981bff;
+    transform: scale(1.05);
+}
+.mensaje-resena {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    color: #38b000;
+}
+ 
+.resenas-lista {
+   
+    display: inline-block;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 18px;
+    box-shadow: 0 12px 10px rgba(214, 49, 255, 0.2);
+}

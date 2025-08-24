@@ -1,0 +1,129 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 19/08/2025, 21:57:59
+    Author     : joj
+*/
+
+
+.container {
+  max-width: 1000px;         
+  margin: 40px auto;          
+  padding: 20px;
+  text-align: center;         
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.container h1 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #333;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+
+.tabla-usuarios {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;            
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+.tabla-usuarios thead {
+  background: #7063BF;
+  color: white;
+}
+
+.tabla-usuarios th {
+  padding: 14px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+
+.tabla-usuarios td {
+  padding: 12px;
+  text-align: center;
+  color: #444;
+  border-bottom: 1px solid #eee;
+}
+
+
+.tabla-usuarios tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.tabla-usuarios tbody tr:hover {
+  background: #eef5ff;
+  transition: 0.3s;
+}
+
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  font-style: italic;
+}
+
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  justify-content: center;
+}
+
+
+.btn-editar {
+  background: #ffc107;
+  color: #333;
+}
+
+.btn-editar:hover {
+  background: #e0a800;
+  color: white;
+}
+
+
+.btn-eliminar {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-eliminar:hover {
+  background: #b02a37;
+}
+
+
+.actions {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.btn-agregar {
+  background: #28a745;
+  color: white;
+  font-size: 15px;
+}
+
+.btn-agregar:hover {
+  background: #218838;
+}
+
+
