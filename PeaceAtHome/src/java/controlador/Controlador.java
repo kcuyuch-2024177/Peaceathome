@@ -508,6 +508,7 @@ public class Controlador extends HttpServlet {
                 }
             }else if(menu.equals("Empleado")){
                 switch(accion){
+                    
                     case "Listar":
                         List<Empleado> listaEmpleados = empleadoDao.listar();
                         request.setAttribute("empleados", listaEmpleados);
