@@ -15,7 +15,7 @@
 .btn-volver {
     background: transparent;
     border: 2px solid #b324c6;
-    color: #b324c6;
+    color: #7063BF;
     padding: 8px 16px;
     border-radius: 8px;
     cursor: pointer;
@@ -28,12 +28,12 @@
 }
 
 .btn-volver:hover {
-    background: #b324c6;
+    background: #5a51a3;
     color: white;
 }
 
 .reserva-header h1 {
-    color: #b324c6;
+    color: #7063BF;
     margin: 0;
     font-size: 2.5rem;
 }
@@ -54,7 +54,7 @@
 
 .propiedad-summary h2 {
     margin: 0 0 15px 0;
-    color: #b324c6;
+    color: #7063BF;
     font-size: 1.8rem;
 }
 
@@ -85,7 +85,7 @@
 .form-section {
     margin-bottom: 35px;
     padding-bottom: 25px;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #7063BF;
 }
 
 .form-section:last-of-type {
@@ -94,7 +94,7 @@
 }
 
 .form-section h3 {
-    color: #b324c6;
+    color: #7063BF;
     margin: 0 0 20px 0;
     font-size: 1.3rem;
     border-bottom: 2px solid #f0f0f0;
@@ -217,7 +217,7 @@
 }
 
 .btn-confirmar {
-    background: #b324c6;
+    background: #7063BF;
     border: none;
     color: white;
     padding: 12px 32px;
@@ -229,7 +229,7 @@
 }
 
 .btn-confirmar:hover {
-    background: #8f1a9c;
+    background: #5a51a3;
 }
 
 .btn-confirmar:disabled {

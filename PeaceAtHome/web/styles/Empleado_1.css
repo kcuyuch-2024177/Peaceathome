@@ -1,0 +1,157 @@
+
+.btn { 
+    color: white; 
+    font-size: 35px; 
+    text-decoration: none; 
+    background: transparent; 
+    margin: 10px 0; 
+    transition: 0.2s; 
+} 
+.btn:hover { 
+    transform: scale(1.2); 
+    color: rgb(232, 24, 166); 
+} 
+
+.btn-form { 
+    color: rgb(255, 255, 255); 
+    font-size: 25px; 
+    text-decoration:double; 
+    background: linear-gradient( to right, #651986,oklab(52.128% 0.11415 -0.1458)); 
+    margin: 0.5px 0; 
+    transition: 0.2s; 
+} 
+.btn-form:hover { 
+    transform: scale(1.2); 
+    color: rgb(238, 238, 238); 
+    background: linear-gradient( to right, #651986,oklab(52.128% 0.11415 -0.1458)); 
+} 
+
+.btn-table { 
+    color: rgb(255, 255, 255); 
+    font-size: 20px; 
+    text-decoration:double; 
+    background: linear-gradient( to right, #da94f8,oklab(37.416% 0.08877 -0.11403)); 
+    margin: 0.5px 0; 
+    transition: 0.2s; 
+} 
+.btn-table:hover { 
+    transform: scale(1.2); 
+    color: rgb(238, 238, 238); 
+    background: linear-gradient( to right, #651986,oklab(52.128% 0.11415 -0.1458)); 
+} 
+
+.card { 
+    background: #ffffff; 
+    margin-top: 15px; 
+    margin-left: 1px; 
+    border-radius: 20px; 
+    transition: transform 0.6s ease-in-out; 
+    border-color: antiquewhite; 
+    width: 100%;  
+    height: auto; 
+} 
+.card:hover { transform: translateY(20px); } 
+
+.card-header { 
+    border-radius: 10px 10px 0 0 !important; 
+    background: linear-gradient( to right, #651986,oklab(55.14% 0.13101 -0.17195)); 
+    color: rgb(107, 107, 107); 
+} 
+
+.form-control { 
+    border-radius: 10px; 
+    border: 1px solid #c4c4c4; 
+    padding: 10px; 
+    transition: 0.2s; 
+    width: 100%; 
+} 
+.form-control:focus { 
+    border-color: #651986; 
+    box-shadow: 0 0 5px rgba(182, 13, 255, 0.5); 
+} 
+
+.form-group.d-flex button { 
+    flex: 0.5; 
+    margin: 0 5px; 
+    border-radius: 8px; 
+} 
+
+.btn { 
+    border-radius: 10px; 
+    transition: 0.2s; 
+} 
+.btn:hover { 
+    transform: scale(0.95); 
+    opacity: 0.9; 
+} 
+
+.table { 
+    width: 100%;  
+    table-layout: fixed; 
+} 
+.table thead { 
+    background: linear-gradient( to right, #651986,oklab(50.517999999999994% 0.12871 -0.173)); 
+    color: rgb(255, 255, 255); 
+} 
+.table-hover tbody tr:hover { 
+    background-color: #9c23ff; 
+    cursor: pointer; 
+} 
+
+.d-flex.justify-content-between button { 
+    flex: 0 0 4%; 
+    max-width: 100%; 
+    border-radius: 40px; 
+    border-color: #ffffff; 
+} 
+
+.table th, .table td { 
+    vertical-align: text-top; 
+    text-align: center; 
+    padding: 12px; 
+} 
+
+.table-hover tbody tr:hover { 
+    background-color: #9c23ff; 
+    color: rgb(255, 255, 255); 
+} 
+
+.table .btn { 
+    border-radius: 6px; 
+    padding: 4px 10px; 
+    font-size: 1.5rem; 
+} 
+
+.row { 
+    height: 100%; 
+    width: 100%;   
+    margin: 0; 
+    display: flex; 
+    flex-wrap: nowrap; 
+} 
+
+.col-md-5, .col-md-7 { 
+    flex: 1; 
+    max-width: 50%; 
+    padding: 15px; 
+} 
+
+/* 🔹 Ajuste principal para evitar solaparse con el nav */
+.main-content {
+    margin-left: 80px; /* espacio del nav */
+    padding: 20px;
+    width: calc(100% - 80px);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centra verticalmente */
+}
+
+.form-control:invalid { 
+    border-color: red; 
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); 
+} 
+.form-control:valid { 
+    border-color: green; 
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5); 
+} 

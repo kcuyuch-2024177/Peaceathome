@@ -14,6 +14,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelo.Empleado;
+import modelo.EmpleadoDAO;
 import modelo.Locacion;
 import modelo.LocacionDAO;
 import modelo.Propiedad;
@@ -29,12 +31,14 @@ import modelo.UsuarioDAO;
 import modelo.Usuario;
 
 public class Controlador extends HttpServlet {
-    
+    int codEmpleado;
     int codSoporte;
     int codLocacion;
     int codServicio;
     int codPropiedad;
     int codReserva;   
+    Empleado empleado = new Empleado();
+    EmpleadoDAO empleadoDao = new EmpleadoDAO();
     SoporteTecnicoDAO soporteDao = new SoporteTecnicoDAO();
     Reserva reserva = new Reserva();
     ReservaDAO reservaDao = new ReservaDAO();
@@ -502,8 +506,51 @@ public class Controlador extends HttpServlet {
                 }
                 break;
                 }
-            }
-                           
+            }else if(menu.equals("Empleado")){
+                switch(accion){
+                    case "Listar":
+                        List<Empleado> listaEmpleados = empleadoDao.listar();
+                        request.setAttribute("empleados", listaEmpleados);
+                        request.getRequestDispatcher("Empleado.jsp").forward(request, response);
+                        break;
+                    case "Agregar":
+                        Empleado nuevoEmpleado = new Empleado();
+                        nuevoEmpleado.setNombreEmpleado(request.getParameter("txtNombreEmpleado"));
+                        nuevoEmpleado.setApellidoEmpleado(request.getParameter("txtApellidoEmpleado"));
+                        nuevoEmpleado.setTelefonoEmpleado(request.getParameter("txtTelefonoEmpleado"));
+                        nuevoEmpleado.setCorreoEmpleado(request.getParameter("txtCorreoEmpleado"));
+                        nuevoEmpleado.setCargo(request.getParameter("txtCargo"));
+                        nuevoEmpleado.setFechaContratacion(request.getParameter("txtFechaContratacion"));
+                        nuevoEmpleado.setEstado(request.getParameter("txtEstado"));
+                        empleadoDao.agregar(nuevoEmpleado);   
+                        response.sendRedirect("Controlador?menu=Empleado&accion=Listar");
+                        break;
+                    case "Editar":
+                        codEmpleado = Integer.parseInt(request.getParameter("codigoEmpleado"));
+                        Empleado e = empleadoDao.listarCodigoEmpleado(codEmpleado);
+                        request.setAttribute("empleado", e);
+                        request.getRequestDispatcher("Empleado.jsp").forward(request, response);
+                        break;
+                    case "Actualizar":
+                        Empleado actualizarEmpleado = new Empleado();
+                        actualizarEmpleado.setCodigoEmpleado(codEmpleado);
+                        actualizarEmpleado.setNombreEmpleado(request.getParameter("txtNombreEmpleado"));
+                        actualizarEmpleado.setApellidoEmpleado(request.getParameter("txtApellidoEmpleado"));
+                        actualizarEmpleado.setTelefonoEmpleado(request.getParameter("txtTelefonoEmpleado"));
+                        actualizarEmpleado.setCorreoEmpleado(request.getParameter("txtCorreoEmpleado"));
+                        actualizarEmpleado.setCargo(request.getParameter("txtCargo"));
+                        actualizarEmpleado.setFechaContratacion(request.getParameter("txtFechaContratacion"));
+                        actualizarEmpleado.setEstado(request.getParameter("txtEstado"));
+                        empleadoDao.actualizar(actualizarEmpleado); 
+                        response.sendRedirect("Controlador?menu=Empleado&accion=Listar");
+                        break;
+                    case "Eliminar":
+                        codEmpleado = Integer.parseInt(request.getParameter("codigoEmpleado"));
+                        empleadoDao.eliminar(codEmpleado);
+                        response.sendRedirect("Controlador?menu=Empleado&accion=Listar");
+                        break;
+                }
+            }                   
         } catch (Exception e) {
             e.printStackTrace();
             response.sendRedirect("Controlador?menu=Home");

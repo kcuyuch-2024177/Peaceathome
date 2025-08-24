@@ -26,7 +26,7 @@
         <a href="Home.jsp" class="nav-btn"><i class='bx bx-home'></i></a>
         <a href="Controlador?menu=Usuario&accion=Listar" class="nav-btn"><i class='bx bx-user'></i></a>
         <a href="SoporteAdmin.jsp" class="btn"><i class='bx bx-cog'></i></a>
-        <a href="EmpleadoAdmin.jsp" class="nav-btn"><i class='bx  bx-group'></i></a>      
+        <a href="Empleado.jsp" class="nav-btn"><i class='bx  bx-group'></i></a>      
     </nav>
 
 <div class="container">
