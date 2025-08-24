@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmpleadoDAO {
+    
     Conexion cn = new Conexion();
     Connection con;
     PreparedStatement ps;
