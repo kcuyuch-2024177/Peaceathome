@@ -63,8 +63,8 @@
                 </div>
                 <div class="reserva-box">
                     <h3>Reserva tu estancia</h3>
-                    <p><strong>Precio:</strong> Q780 por noche</p>
-                    <a href="">
+                    <p><strong>Precio:</strong> Q450 por noche</p>
+                    <a href="Reserva.jsp">
                         <button class="btn-reservar">Reservar ahora</button>
                     </a>
                     <br><br>

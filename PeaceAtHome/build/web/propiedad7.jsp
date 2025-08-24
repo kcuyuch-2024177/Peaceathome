@@ -58,20 +58,20 @@
                         </table>
                     </div>
                     <div class="reserva-box">
-                        <h3>Reserva tu estancia</h3>
-                        <p><strong>Precio:</strong> Q500 por noche</p>
-                        <a href="">
-                            <button class="btn-reservar">Reservar ahora</button>
-                        </a>
-                        <br><br>
-                        <a href="">
-                            <button class="btn-reservar">Comodidades</button>
-                        </a>
-                        <br><br>
-                        <a href="NotiReembolso.jsp">
-                            <button class="btn-reservar">Reembolso</button>
-                        </a>
-                    </div>
+                    <h3>Reserva tu estancia</h3>
+                    <p><strong>Precio:</strong> Q450 por noche</p>
+                    <a href="Reserva.jsp">
+                        <button class="btn-reservar">Reservar ahora</button>
+                    </a>
+                    <br><br>
+                    <a href="">
+                        <button class="btn-reservar">Comodidades</button>
+                    </a>
+                    <br><br>
+                    <a href="NotiReembolso.jsp">
+                        <button class="btn-reservar">Reembolso</button>
+                    </a>
+                </div>
                 </div>
             </div>
             <p class="descripcion">
