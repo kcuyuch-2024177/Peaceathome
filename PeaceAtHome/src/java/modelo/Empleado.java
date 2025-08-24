@@ -13,6 +13,7 @@ public class Empleado {
     private String estado;
 
     public Empleado() {
+        
     }
 
     public Empleado(int codigoEmpleado, String nombreEmpleado, String apellidoEmpleado, String telefonoEmpleado, String correoEmpleado, String cargo, String fechaContratacion, String estado) {
